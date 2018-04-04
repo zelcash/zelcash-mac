@@ -6,7 +6,7 @@ include ../Makefile.build
 ZELCASH_VERSION=1
 
 zelcash_clone:
-	if [ ! -d "zelcash_$(ZELCASH_VERSION)" ]; then git clone -b $(ZELCASH_VERSION) https://github.com/zelcash/zelcash.git zelcash_$(ZELCASH_VERSION); fi
+	if [ ! -d "zelcash_$(ZELCASH_VERSION)" ]; then git clone -b $(ZELCASH_VERSION) https://github.com/Lumiboy/zelcash.git zelcash_$(ZELCASH_VERSION); fi
 
 zelcash_config:
 	$(call patchme,zelcash_$(ZELCASH_VERSION))

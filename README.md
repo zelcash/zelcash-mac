@@ -9,6 +9,7 @@ All build tools (`autoconf, automake, libtool, pkgconfig, cmake, install and rea
 
 ### Build instructions
 ```shell
+# open terminal
 # run once to install Xcode CLI tools
 $ xcode-select --install
 # clone and build Zelcash on macOS
