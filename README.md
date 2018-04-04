@@ -117,7 +117,7 @@ Developers of `Zelcash Foundation`
 ## Donations
 If you feel this project is useful to you. Feel free to donate.
 
-    BTC address: 1GmXRm5sEATy3Kz1hCxS1dwfXuCPkevsa
+    BTC address: 
     ZEL address: 
 
 
