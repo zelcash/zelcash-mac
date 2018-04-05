@@ -1,55 +1,58 @@
-# GNU Tools for macOS
+# Tools
 
-This repository builds most used GNU tools for macOS  
-No additional dependency required except Xcode Command Line Tools  
-All build tools are compiled from scratch with native macOS `clang`  
-
-### Available packages
+### add subtree to project
 ```
-autoconf
-automake
-libtool    (prefixed with 'g')
-pkg-config
-objconv
-fasm
-cmake
-coreutils  (only install and readlink)
-kconfig
-gmp        (only as static library)
-mpfr       (only as static library)
-mpc        (only as static library)
-isl        (only as static library)
-gcc        (suffixed with version)
+$ git remote add tools https://github.com/kozyilmaz/tools.git
+$ git subtree add --prefix=tools/ --squash tools master
 ```
 
-### Build instructions
-```shell
-# run once to install Xcode CLI tools
-$ xcode-select --install
-
-# clone and build tools
-$ git clone https://github.com/kozyilmaz/tools.git
-$ cd tools
-$ source environment
-$ make
+### check subtree after clean clone
+```
+$ git fetch https://github.com/kozyilmaz/tools.git master
+$ ./contrib/devtools/git-subtree-check.sh tools
 ```
 
-### Fine Tuning and Debugging
-```shell
-# console logs will be enabled via PRINT_DEBUG
-$ cd tools
-$ source environment
-$ PRINT_DEBUG=y make all
+### sync subtree repositories
+```
+$ git remote add tools-remote https://github.com/kozyilmaz/tools.git
+$ git subtree pull --prefix=tools/ --squash tools-remote master
+```
 
-# environment file can be edited to increase/decrease parallel jobs
-BSPJOB=4
+### two ways of checking subtrees
+```
+$ git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
+$ git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq | xargs -I {} bash -c 'if [ -d $(git rev-parse --show-toplevel)/{} ] ; then echo {}; fi'
+```
 
-# environment file can be edited to select/unselect packages:
-export TOOLS_ENABLE_ESSENTIALS=y
-export TOOLS_ENABLE_OBJCONV=y
-export TOOLS_ENABLE_FASM=y
-export TOOLS_ENABLE_CMAKE=y
-export TOOLS_ENABLE_GNUTOOLS=y
-export TOOLS_ENABLE_KCONFIG=y
-export TOOLS_ENABLE_GCC=y
+### working with forks
+```
+$ git clone https://github.com/<your_username>/<forked_repo>.git
+$ git remote add upstream https://github.com/<forked_username>/<forked_repo>.git
+$ git fetch upstream
+$ git merge upstream/master
+```
+
+### working with branches
+```
+$ git branch <branch>
+$ git checkout <branch>
+$ git push -u origin <branch>
+```
+
+### revert a single commit
+```
+$ git checkout <branch>
+$ git revert <commit>
+$ git push origin <branch>
+```
+
+### tag tree
+```
+$ git tag <tagname>
+$ git push origin --tags
+```
+
+### reference GitHub issue or pull request
+```
+https://github.com/<user>/<repo>/issues/<number>
 ```

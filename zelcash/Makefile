@@ -13,7 +13,7 @@ zelcash_config:
 
 zelcash_build:
 	( cd zelcash_$(ZELCASH_VERSION); \
-		LIBTOOLIZE=glibtoolize ./zcutil/build.sh --disable-libs -j ${BSPJOB}; \
+		LIBTOOLIZE=glibtoolize ./zcutil/build.sh --disable-libs; \
 	)
 
 zelcash_install:

@@ -1,24 +1,24 @@
 diff --git a/src/Makefile.am b/src/Makefile.am
-index 2db4e362..e111e686 100644
+index 25038c1e..a7ed4fd4 100644
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
-@@ -525,7 +525,10 @@ libzcash_a_SOURCES = \
+@@ -527,7 +527,10 @@ libzelcash_a_SOURCES = \
    zelcash/circuit/prfs.tcc \
    zelcash/circuit/utils.tcc
  
--libzcash_a_CPPFLAGS = -DMULTICORE -fopenmp -fPIC -DBINARY_OUTPUT -DCURVE_ALT_BN128 -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS $(HARDENED_CPPFLAGS) -pipe -O1 -g -Wstack-protector -fstack-protector-all -fPIE -fvisibility=hidden -DSTATIC $(BITCOIN_INCLUDES)
+-libzelcash_a_CPPFLAGS = -DMULTICORE -fopenmp -fPIC -DBINARY_OUTPUT -DCURVE_ALT_BN128 -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS $(HARDENED_CPPFLAGS) -pipe -O1 -g -Wstack-protector -fstack-protector-all -fPIE -fvisibility=hidden -DSTATIC $(BITCOIN_INCLUDES)
 +if HAVE_OPENMP
-+libzcash_a_CPPFLAGS = -DMULTICORE -fopenmp
++libzelcash_a_CPPFLAGS = -DMULTICORE -fopenmp
 +endif
-+libzcash_a_CPPFLAGS := $(libzcash_a_CPPFLAGS) -fPIC -DBINARY_OUTPUT -DCURVE_ALT_BN128 -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS $(HARDENED_CPPFLAGS) -pipe -O1 -g -Wstack-protector -fstack-protector-all -fPIE -fvisibility=hidden -DSTATIC $(BITCOIN_INCLUDES)
++libzelcash_a_CPPFLAGS := $(libzelcash_a_CPPFLAGS) -fPIC -DBINARY_OUTPUT -DCURVE_ALT_BN128 -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS $(HARDENED_CPPFLAGS) -pipe -O1 -g -Wstack-protector -fstack-protector-all -fPIE -fvisibility=hidden -DSTATIC $(BITCOIN_INCLUDES)
  
- libzcash_a_CXXFLAGS = $(HARDENED_CXXFLAGS) -fwrapv -fno-strict-aliasing
+ libzelcash_a_CXXFLAGS = $(HARDENED_CXXFLAGS) -fwrapv -fno-strict-aliasing
  
 diff --git a/src/Makefile.gtest.include b/src/Makefile.gtest.include
-index eaad8a79..9bf29810 100644
+index 522bfa84..5940453a 100644
 --- a/src/Makefile.gtest.include
 +++ b/src/Makefile.gtest.include
-@@ -46,7 +46,11 @@ zelcash_gtest_SOURCES += \
+@@ -45,7 +45,11 @@ zelcash_gtest_SOURCES += \
  	wallet/gtest/test_wallet.cpp
  endif
  
