@@ -1,6 +1,6 @@
-# Yet Another Zelcash Builder for Apple Platform
+# Zelcash Builder for Apple Platform
 
-![Screenshot](https://github.com/kozyilmaz/zelcash-apple/raw/master/docs/zelcash-apple.png "Zelcash on Mac OS")
+![Screenshot](https://github.com/Lumiboy/zelcash-mac/raw/master/docs/zelcash-apple.png "Zelcash on Mac OS")
 
 This repository builds standalone Zelcash binaries for macOS platform without installing brew.  
 No additional dependency required except Xcode (https://developer.apple.com/xcode).  
@@ -90,7 +90,7 @@ bash-3.2$ cat zelcash-init
 
 if [ ! -f "$HOME/Library/Application Support/zelcash/zelcash.conf" ]; then
     echo "Creating zelcash.conf"
-    mkdir -p "$HOME/Library/Application Support/Zelcash/"
+    mkdir -p "$HOME/Library/Application Support/zelcash/"
     echo "rpcuser=zelcashrpc" > ~/Library/Application\ Support/zelcash/zelcash.conf
     PASSWORD=$(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
     echo "rpcpassword=$PASSWORD" >> "$HOME/Library/Application Support/zelcash/zelcash.conf"

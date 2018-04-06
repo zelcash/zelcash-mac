@@ -3,7 +3,7 @@ target_name ?= zelcash
 
 include ../Makefile.build
 
-ZELCASH_VERSION=1
+ZELCASH_VERSION=master
 
 zelcash_clone:
 	if [ ! -d "zelcash_$(ZELCASH_VERSION)" ]; then git clone -b $(ZELCASH_VERSION) https://github.com/Lumiboy/zelcash.git zelcash_$(ZELCASH_VERSION); fi
