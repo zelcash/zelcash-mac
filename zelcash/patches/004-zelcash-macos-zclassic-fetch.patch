@@ -1,0 +1,4 @@
+diff --git a/zcutil/fetch-params.sh b/zcutil/fetch-params.sh
+index 10bade7c..9eb52bec 100755
+--- a/zcutil/fetch-params.sh
++++ b/zcutil/fetch-params.sh
