@@ -6,6 +6,12 @@ This repository builds standalone Zelcash binaries for macOS platform without in
 No additional dependency required except Xcode (https://developer.apple.com/xcode).  
 All build tools (`autoconf, automake, libtool, pkgconfig, cmake, install and readlink`) and `Zelcash` are compiled from scratch (finally with `clang`).  
 
+###  OSX - macOS.
+
+Min. OSX version: 10.8.x
+Tested on 10.12.x :white_check_mark:
+Tested on 10.13.x :white_check_mark:
+
 
 ### Build instructions
 ```shell
@@ -106,13 +112,12 @@ Complete!
 
 ## Thanks
 Developers of `Zelcash`  
-Developers of `Zcash` 
+Developers of `Zcash`  
 Developers of `ZClassic` for MacOS patches
 
 ## Donations
 If you feel this project is useful to you. Feel free to donate.
 
-    BTC address: 
     ZEL address: t1L6FizKPfikQatYTHydDbPnvgKhXFatiYm
 
 
