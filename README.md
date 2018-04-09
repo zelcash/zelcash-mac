@@ -8,9 +8,9 @@ All build tools (`autoconf, automake, libtool, pkgconfig, cmake, install and rea
 
 ###  OSX - macOS.
 
-Min. OSX version: 10.8.x
-Tested on 10.12.x :white_check_mark:
-Tested on 10.13.x :white_check_mark:
+Min. OSX version: 10.8.x  
+Tested on 10.12.x :white_check_mark:  
+Tested on 10.13.x :white_check_mark:  
 
 
 ### Build instructions
