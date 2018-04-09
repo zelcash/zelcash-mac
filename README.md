@@ -23,11 +23,11 @@ You can then copy binary directory anywhere you like there are no dependencies t
 ```shell
 bash-3.2$ ls -lrt out/usr/local/bin
 total 31544
--rwxr-xr-x  1 loki  staff       483 Dec 16 15:56 zelcash-init
--rwxr-xr-x  1 loki  staff  13120252 Dec 20 01:06 zelcashd
--rwxr-xr-x  1 loki  staff   1772400 Dec 20 01:06 zelcash-tx
--rwxr-xr-x  1 loki  staff      4761 Dec 20 01:06 zcash-fetch-params
--rwxr-xr-x  1 loki  staff   1237116 Dec 20 01:06 zelcash-cli
+-rwxr-xr-x  1 lumi  staff       483 Dec 16 15:56 zelcash-init
+-rwxr-xr-x  1 lumi  staff  13120252 Dec 20 01:06 zelcashd
+-rwxr-xr-x  1 lumi  staff   1772400 Dec 20 01:06 zelcash-tx
+-rwxr-xr-x  1 lumi  staff      4761 Dec 20 01:06 zcash-fetch-params
+-rwxr-xr-x  1 lumi  staff   1237116 Dec 20 01:06 zelcash-cli
 bash-3.2$ otool -L out/usr/local/bin/zelcashd
 out/usr/local/bin/zelcashd:
     /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1238.60.2)
@@ -72,16 +72,16 @@ for your bandwidth constraints. If the files are already present and
 have the correct sha256sum, no networking is used.
 
 Creating params directory. For details about this directory, see:
-/Users/loki/Library/Application Support/ZcashParams/README
+/Users/lumi/Library/Application Support/ZcashParams/README
 
 Retrieving: https://z.cash/downloads/sprout-proving.key
 ######################################################################## 100.0%
-/Users/loki/Library/Application Support/ZcashParams/sprout-proving.key.dl: OK
-/Users/loki/Library/Application Support/ZcashParams/sprout-proving.key.dl -> /Users/loki/Library/Application Support/ZcashParams/sprout-proving.key
+/Users/lumi/Library/Application Support/ZcashParams/sprout-proving.key.dl: OK
+/Users/lumi/Library/Application Support/ZcashParams/sprout-proving.key.dl -> /Users/lumi/Library/Application Support/ZcashParams/sprout-proving.key
 Retrieving: https://z.cash/downloads/sprout-verifying.key
 ######################################################################## 100.0%
-/Users/loki/Library/Application Support/ZcashParams/sprout-verifying.key.dl: OK
-/Users/loki/Library/Application Support/ZcashParams/sprout-verifying.key.dl -> /Users/loki/Library/Application Support/ZcashParams/sprout-verifying.key
+/Users/lumi/Library/Application Support/ZcashParams/sprout-verifying.key.dl: OK
+/Users/lumi/Library/Application Support/ZcashParams/sprout-verifying.key.dl -> /Users/lumi/Library/Application Support/ZcashParams/sprout-verifying.key
 bash-3.2$ 
 bash-3.2$ cat zelcash-init 
 #!/bin/bash
@@ -102,18 +102,18 @@ Creating zelcash.conf
 Complete!
 ```
 
-Vaklinov's [Desktop GUI Wallet](https://github.com/vaklinov/zelcash-swing-wallet-ui) also works, please follow build instructions for MacOS
 
 
 ## Thanks
 Developers of `Zelcash`  
+Developers of `Zcash` 
 Developers of `ZClassic` for MacOS patches
 
 ## Donations
 If you feel this project is useful to you. Feel free to donate.
 
     BTC address: 
-    ZEL address: 
+    ZEL address: t1L6FizKPfikQatYTHydDbPnvgKhXFatiYm
 
 
 ### Disclaimer
