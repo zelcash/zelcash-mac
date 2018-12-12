@@ -40,10 +40,10 @@ export BSPINSTALL=${BSPROOT}/zelcash-macos-$release_version;
 make
 echo $git_rev_string  > ${BSPINSTALL}/usr/local/bin/version.txt
 echo $git_tag_string >> ${BSPINSTALL}/usr/local/bin/version.txt
-echo "Zelcash for macOS ($release_version) is installed to ${BSPINSTALL}"
+echo "ZelCash for macOS ($release_version) is installed to ${BSPINSTALL}"
 
 # create tarball and checksum
-echo "creating Zelcash tarball 'zelcash-macos-$release_version.tar.bz2' and checksum"
+echo "creating ZelCash tarball 'zelcash-macos-$release_version.tar.bz2' and checksum"
 tar -cjvf zelcash-macos-$release_version.tar.bz2 zelcash-macos-$release_version
 shasum -a 256 zelcash-macos-$release_version.tar.bz2 > zelcash-macos-$release_version.tar.bz2.hash
 shasum -a 256 -c zelcash-macos-$release_version.tar.bz2.hash

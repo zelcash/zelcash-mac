@@ -6,11 +6,11 @@ include ../Makefile.build
 GMP_VERSION="6.1.2"
 
 gmp_clone:
-	if [ ! -f "gmp-$(GMP_VERSION).tar.gz" ]; then curl -OL http://ftp.gnu.org/gnu/gmp/gmp-$(GMP_VERSION).tar.bz2; fi;
+	if [ ! -f "gmp-$(GMP_VERSION).tar.gz" ]; then curl -OL http://ftpmirror.gnu.org/gmp/gmp-$(GMP_VERSION).tar.bz2; fi;
 	if [ ! -d "gmp-$(GMP_VERSION)" ]; then tar xzf gmp-$(GMP_VERSION).tar.bz2; fi
 
 gmp_config:
-	( cd gmp-$(GMP_VERSION); ./configure --prefix=${BSPTOOLS} --enable-cxx  --enable-static --disable-shared; )
+	( cd gmp-$(GMP_VERSION); CFLAGS="" CXXFLAGS="" ./configure --prefix=${BSPTOOLS} --with-pic --enable-cxx --enable-static --disable-shared; )
 
 gmp_build:
 	make -C gmp-$(GMP_VERSION) -j ${BSPJOB}

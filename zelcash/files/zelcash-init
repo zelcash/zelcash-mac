@@ -2,18 +2,11 @@
 
 # excerpted from zclassic/zutil/init-mac.sh
 
-if [ ! -f "$HOME/Library/Application Support/zelcash/zelcash.conf" ]; then
+if [ ! -f "$HOME/Library/Application Support/ZelCash/zelcash.conf" ]; then
 	echo "Creating zelcash.conf"
-	mkdir -p "$HOME/Library/Application Support/zelcash/"
-	echo "rpcuser=username" >> ~/Library/Application\ Support/zelcash/zelcash.conf
+	mkdir -p "$HOME/Library/Application Support/ZelCash/"
+	echo "rpcuser=zelcashrpc" > ~/Library/Application\ Support/ZelCash/zelcash.conf
 	PASSWORD=$(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-	echo "rpcpassword=$PASSWORD" >> "$HOME/Library/Application Support/zelcash/zelcash.conf"
-	echo "addnode=node.zel.cash" >> ~/Library/Application\ Support/zelcash/zelcash.conf
-	echo "addnode=explorer.zel.cash" >> ~/Library/Application\ Support/zelcash/zelcash.conf
-	echo "addnode=explorer2.zel.cash" >> ~/Library/Application\ Support/zelcash/zelcash.conf
-	echo "addnode=explorer.zelcash.online" >> ~/Library/Application\ Support/zelcash/zelcash.conf
-	echo "addnode=node-eu.zelcash.com" >> ~/Library/Application\ Support/zelcash/zelcash.conf
-	echo "addnode=node-uk.zelcash.com" >> ~/Library/Application\ Support/zelcash/zelcash.conf
-	echo "addnode=node-asia.zelcash.com" >> ~/Library/Application\ Support/zelcash/zelcash.conf
+	echo "rpcpassword=$PASSWORD" >> "$HOME/Library/Application Support/ZelCash/zelcash.conf"
 	echo "Complete!"
 fi
